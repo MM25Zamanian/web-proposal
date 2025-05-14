@@ -27,8 +27,8 @@ body {
 }
 
 .gold-gradient {
-  background: -webkit-linear-gradient(0deg, #8f6B29, #FDE08D, #DF9F28);
-  background: linear-gradient(0deg, #8f6B29, #FDE08D, #DF9F28);
+  background: -webkit-linear-gradient(179deg, #8f6B29, #FDE08D, #DF9F28);
+  background: linear-gradient(179deg, #8f6B29, #FDE08D, #DF9F28);
 }
 
 b {

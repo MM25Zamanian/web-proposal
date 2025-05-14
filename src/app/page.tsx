@@ -1,103 +1,124 @@
-import Image from "next/image";
+"use client";
+
+import FirstSlide from "./components/slides/first";
+
+import Slide1Image1 from "#/samples/slide-1/slide-1.jpeg";
+import Slide1Image2 from "#/samples/slide-1/slide-2.jpeg";
+import Slide1Image3 from "#/samples/slide-1/slide-3.jpeg";
+import Slide1Image4 from "#/samples/slide-1/slide-4.jpeg";
+import Slide1Image5 from "#/samples/slide-1/slide-5.jpeg";
+import Slide1Image6 from "#/samples/slide-1/slide-6.jpeg";
+import Slide1Image7 from "#/samples/slide-1/slide-7.jpeg";
+import Slide1Image8 from "#/samples/slide-1/slide-8.jpeg";
+import Slide1Image9 from "#/samples/slide-1/slide-9.jpeg";
+
+import Slide2Image1 from "#/samples/slide-2/slide-1.jpeg";
+import Slide2Image2 from "#/samples/slide-2/slide-2.jpeg";
+import Slide2Image3 from "#/samples/slide-2/slide-3.jpeg";
+import Slide2Image4 from "#/samples/slide-2/slide-4.jpeg";
+import Slide2Image5 from "#/samples/slide-2/slide-5.jpeg";
+import Slide2Image6 from "#/samples/slide-2/slide-6.jpeg";
+import Slide2Image7 from "#/samples/slide-2/slide-7.jpeg";
+import Slide2Image8 from "#/samples/slide-2/slide-8.jpeg";
+import Slide2Image9 from "#/samples/slide-2/slide-9.jpeg";
+
+import Slide3Image1 from "#/samples/slide-3/slide-1.jpeg";
+import Slide3Image2 from "#/samples/slide-3/slide-2.jpeg";
+import Slide3Image3 from "#/samples/slide-3/slide-3.jpeg";
+import Slide3Image4 from "#/samples/slide-3/slide-4.jpeg";
+import Slide3Image5 from "#/samples/slide-3/slide-5.jpeg";
+import Slide3Image6 from "#/samples/slide-3/slide-6.jpeg";
+
+import Slide4Image1 from "#/samples/slide-4/slide-1.jpeg";
+import Slide4Image2 from "#/samples/slide-4/slide-2.jpeg";
+import Slide4Image3 from "#/samples/slide-4/slide-3.jpeg";
+import Slide4Image4 from "#/samples/slide-4/slide-4.jpeg";
+
+import Slide5Image1 from "#/samples/slide-5/slide-1.jpeg";
+import Slide5Image2 from "#/samples/slide-5/slide-2.jpeg";
+import Slide5Image3 from "#/samples/slide-5/slide-3.jpeg";
+import Slide5Image4 from "#/samples/slide-5/slide-4.jpeg";
+import Slide5Image5 from "#/samples/slide-5/slide-5.jpeg";
+import dynamic from "next/dynamic";
+
+const ImageSlide = dynamic(() => import("./components/slides/image"), {
+  ssr: false,
+});
+const SecondSlide = dynamic(() => import("./components/slides/second"), {
+  ssr: false,
+});
+const ThirdSlide = dynamic(() => import("./components/slides/third"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className="flex flex-col *:shrink-0 snap-y snap-mandatory *:snap-center overflow-x-hidden overflow-y-scroll relative size-full">
+      <FirstSlide />
+      <SecondSlide />
+      <ThirdSlide />
+      <ImageSlide
+        title="Takht-E"
+        strongTitle="Jamshid"
+        subtitle="Petrochemical Co."
+        images={[
+          Slide1Image1,
+          Slide1Image2,
+          Slide1Image3,
+          Slide1Image4,
+          Slide1Image5,
+          Slide1Image6,
+          Slide1Image7,
+          Slide1Image8,
+          Slide1Image9,
+        ]}
+      />
+      <ImageSlide
+        title="Persian Gulf"
+        strongTitle="Holding"
+        subtitle="Petrochemical Co."
+        images={[
+          Slide2Image1,
+          Slide2Image2,
+          Slide2Image3,
+          Slide2Image4,
+          Slide2Image5,
+          Slide2Image6,
+          Slide2Image7,
+          Slide2Image8,
+          Slide2Image9,
+        ]}
+      />
+      <ImageSlide
+        title="Chadormalu"
+        strongTitle="Mining"
+        subtitle="Industrial Co."
+        images={[
+          Slide3Image1,
+          Slide3Image2,
+          Slide3Image3,
+          Slide3Image4,
+          Slide3Image5,
+          Slide3Image6,
+        ]}
+      />
+      <ImageSlide
+        title="Khouzestan"
+        subtitle="Oxin Steel Co."
+        images={[Slide4Image1, Slide4Image2, Slide4Image3, Slide4Image4]}
+      />
+      <ImageSlide
+        title="Jam"
+        strongTitle="Petrochemifcal Company"
+        subtitle="World Class"
+        images={[
+          Slide5Image1,
+          Slide5Image2,
+          Slide5Image3,
+          Slide5Image4,
+          Slide5Image5,
+        ]}
+      />
+    </main>
   );
 }

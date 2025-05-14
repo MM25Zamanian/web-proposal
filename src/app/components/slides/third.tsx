@@ -114,7 +114,7 @@ export default function ThirdSlide() {
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        className="absolute bottom-12 -start-10 flex h-48 w-92 items-end flex-col gap-4"
+        className="absolute bottom-12 -start-10 flex h-36 w-72 md:h-48 md:w-92 items-end flex-col gap-4"
       >
         <motion.div
           variants={{
